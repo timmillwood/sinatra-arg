@@ -30,4 +30,4 @@ Anywhere within your Sinatra application you can now call `arg()` to get the val
 
 
 ##Other information
-Sinatra arg was built by and if copyright of [Tim Millwood](http://www.millwoodonline.co.uk "Millwood Online") who you can follow on [Twitter](http://www.twitter.com/timmillwood).
+Sinatra arg was built by and is copyright of [Tim Millwood](http://www.millwoodonline.co.uk "Millwood Online") who you can follow on [Twitter](http://www.twitter.com/timmillwood).
