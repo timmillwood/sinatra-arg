@@ -21,13 +21,26 @@ Anywhere within your Sinatra application you can now call `arg()` to get the val
     require 'sinatra-arg'
     
     get '/hello/:name' do
-      if arg(1).downcase == 'tim'
-        "I knew you were coming Tim"
-      else
-        "Hello #{params[:name].capitalize}"
-      end
+      erb "Hello #{arg(1).capitalize}"
     end
-
+    
+    get '/goodbye/:name' do
+      erb "Goodbye #{arg(1).capitalize}"
+    end
+    
+    __END__
+    
+    @@ layout
+    <html>
+    <head>
+      <% if arg(0) == 'hello' %>
+        <link href="/css/hello.css" rel="stylesheet">
+      <% else %>
+        <link href="/css/other.css" rel="stylesheet">
+      <% end %>
+    </head>
+    <body><%= yield %></body>
+    </html>
 
 ##Other information
 Sinatra arg was built by and is copyright of [Tim Millwood](http://www.millwoodonline.co.uk "Millwood Online") who you can follow on [Twitter](http://www.twitter.com/timmillwood).
